@@ -39,6 +39,14 @@ module.exports = {
         from: path.join(__dirname, 'src', 'utils', 'fonts'),
         to: path.join(__dirname, 'lib', 'fonts'),
       },
+      {
+        from: path.join(__dirname, 'src', 'config'),
+        to: path.join(__dirname, 'lib', 'config'),
+      },
+      {
+        from: path.join(__dirname, 'src', 'locales'),
+        to: path.join(__dirname, 'lib', 'locales'),
+      },
     ]),
   ],
   optimization: {

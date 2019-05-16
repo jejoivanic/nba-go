@@ -6,7 +6,11 @@ import isAsyncSupported from 'is-async-supported';
 import chalk from 'chalk';
 import updateNotifier from 'update-notifier';
 
-import { player as playerCommand, game as gameCommand } from './command';
+import {
+  player as playerCommand,
+  game as gameCommand,
+  locale as localeCommand,
+} from './command';
 import { error, bold, nbaRed, neonGreen } from './utils/log';
 
 import pkg from '../package.json';
@@ -27,6 +31,14 @@ program.version(
   }\n`,
   '-v, --version'
 );
+
+program
+  .command('locale')
+  .option('-l, --list', 'List the available locales to set')
+  .option('-s, --set <locale>')
+  .action(option => {
+    localeCommand(option);
+  });
 
 program
   .command('player <name>')
