@@ -1,0 +1,120 @@
+{
+    "CLI": {
+        "UNKNOWN_COMMAND": "Unknown command",
+        "DID_YOU_MEAN": "Did you mean"
+    },
+    
+    "COMMANDS": {
+        "EXAMPLE": "Example",
+        "CHECK_GITHUB_PAGE": "For more detailed information, please check the GitHub page",
+        "LOCALE": {
+            "LIST": "List the available locales to set",
+            "SET": "Set the locale passed as parameter",
+            "HELP": "Check and configure locales",
+            "EXAMPLE_0": "Set the current locale to 'en_US'"
+        },
+        "PLAYER": {
+            "INFO": "Check the player's basic information",
+            "REGULAR": "Check the player's career regular season data",
+            "PLAYOFFS": "Check the player's career playoffs data",
+            "COMPARE": "Compare the stats of two or more players. Seperate the names with commas, ex:'Stepen Curry, Lebron James'",
+            "HELP": "Get player's basic information, regular season data and playoffs data",
+            "EXAMPLE_0": "Show both Seth Curry's and Stephen Curry's basic information",
+            "EXAMPLE_1": "Show both Seth Curry's and Stephen Curry's regular season data"
+        },
+        "GAME": {
+            "DATE": "Watch games at specific date",
+            "YESTERDAY": "Watch yesterday's games",
+            "TODAY": "Watch today's games",
+            "TOMORROW": "Watch tomorrow's games",
+            "FILTER": "Filter game choices to watch",
+            "NETWORKS": "See the networks game is/was televised on",
+            "HELP_0": "Watch NBA live play-by-play, game preview and box score",
+            "HELP_1": "You have to enter what day's schedule at first",
+            "HELP_2": "Notice that if you don't provide any option, default date will be",
+            "EXAMPLE_0": "Show game schedule on 2017/11/11",
+            "EXAMPLE_1": "Show today's game schedule"
+        },
+        "HELP": {
+            "WELCOME_TO": "Welcome to",
+            "EXAMPLE_0": "Wanna watch NBA game please enter",
+            "EXAMPLE_1": "Wanna check NBA player information please enter",
+            "EXAMPLE_2_0": "Or enter",
+            "EXAMPLE_2_1": "to get more helpful information"
+        }
+    },
+
+    "GAME": {
+        "CANT_FIND_TEAMS_THAT_MATCH": "Can't find any teams that match",
+        "DATE_INVALID": "Date is invalid",
+        "CANT_FIND_ANY_OPTION": "Can't find any option",
+        "LOADING_GAME_PREVIEW": "Loading Game Preview",
+        "TOTAL": "Total",
+        "FINAL": "Final",
+        "LOADING_GAME_SCHEDULE": "Loading Game Schedule",
+        "WHICH_GAME_DO_YOU_WANT_TO_WATCH": "Which game do you want to watch",
+        "GAME_RECORD_LEADERS": "Game Record Leaders",
+        "HOME": "Home",
+        "AWAY": "Away",
+        "SCORE": "Score",
+        "STATUS": "Status",
+        "Points": "Points",
+        "Assists": "Assists",
+        "Rebounds": "Rebounds",
+        "BOXSCORE": {
+            "PLAYER": "PLAYER",
+            "POS": "POS",
+            "MIN": "MIN",
+            "FG": "FG",
+            "3FG": "3FG",
+            "FT": "FT",
+            "OREB": "OREB",
+            "DREB": "DREB",
+            "REB": "REB",
+            "AST": "AST",
+            "STL": "STL",
+            "BLK": "BLK",
+            "TO": "TO",
+            "PF": "PF",
+            "PTS": "PTS"
+        }
+    },
+
+    "PLAYER": {
+        "REGULAR_SEASON": "Regular Season",
+        "DOESNT_HAVE_ANY_PLAYOFFS_DATA": "doesn't have any playoffs data",
+        "HEIGHT": "Height",
+        "WEIGHT": "Weight",
+        "COUNTRY": "Country",
+        "BORN": "Born",
+        "EXP": "EXP",
+        "DRAFT": "Draft",
+        "PTS": "PTS",
+        "REB": "REB",
+        "AST": "AST",
+        "YRS": "yrs",
+        "SEASON": "SEASON",
+        "TEAM": "TEAM",
+        "AGE": "AGE",
+        "GP": "GP",
+        "MIN": "MIN",
+        "FG": "FG",
+        "3P": "3P",
+        "FT": "FT",
+        "STL": "STL",
+        "BLK": "BLK",
+        "TOV": "TOV",
+        "OVERALL": "Overall"
+    },
+
+    "LOCALE_SET_CORRECTLY": "The locale was set correctly",
+    "LIST_POSSIBLES_LOCALES": "List of possibles locales to set",
+
+    "Post Season": "Post Season",
+    "Regular Season": "Regular Season",
+    "SORRY": "Sorry",
+    "TOTAL": "Total",
+    "TOTALS": "Totals",
+    "FINAL": "Final",
+    "TEAM": "Team"
+}

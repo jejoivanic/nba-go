@@ -1,0 +1,120 @@
+{
+    "CLI": {
+        "UNKNOWN_COMMAND": "Comando desconocido",
+        "DID_YOU_MEAN": "Quisiste decir"
+    },
+    
+    "COMMANDS": {
+        "EXAMPLE": "Ejemplo",
+        "CHECK_GITHUB_PAGE": "Para información más detallada, por favor revise la página en GitHub",
+        "LOCALE": {
+            "LIST": "Lista los locales disponibles para asignar",
+            "SET": "Asigna el locale pasado como parámetro",
+            "HELP": "Revisa y configura locales",
+            "EXAMPLE_0": "Asigna el actual locale a 'en_US'"
+        },
+        "PLAYER": {
+            "INFO": "Revisa la información básica del jugador",
+            "REGULAR": "Revisa la información de las temporadas regulares de la carrera del jugador",
+            "PLAYOFFS": "Revisa la información de los playoffs de la carrera del jugador",
+            "COMPARE": "Compara las estadísticas de dos o más jugadores. Separe los nombres con comas, ej:'Stepen Curry, Lebron James'",
+            "HELP": "Obtiene la información básica del jugador, temporada regular y playoffs",
+            "EXAMPLE_0": "Muestra la información básica tanto de Seth Curry como de Stephen Curry",
+            "EXAMPLE_1": "Muestra la información de la temporada regular tanto de Seth Curry como de Stephen Curry"
+        },
+        "GAME": {
+            "DATE": "Mira juegos en un fecha específica",
+            "YESTERDAY": "Mira los juegos de ayer",
+            "TODAY": "Mira los juegos de hoy",
+            "TOMORROW": "Mira los juegos de mañana",
+            "FILTER": "Filtra las opciones de juegos para mirar",
+            "NETWORKS": "Ver las redes en las cuales el juego es/fue televisado",
+            "HELP_0": "Mira NBA jugada a jugada, previsualización de juego y cuadro de puntuación en vivo",
+            "HELP_1": "Tiene que ingresar que día de cronograma en primer lugar",
+            "HELP_2": "Si no provee opción, la fecha por defecto será",
+            "EXAMPLE_0": "Muestra el cronograma de juego del 2017/11/11",
+            "EXAMPLE_1": "Muestra el cronograma de juego de hoy"
+        },
+        "HELP": {
+            "WELCOME_TO": "Bienvenidx a",
+            "EXAMPLE_0": "Para mirar juego de NBA por favor ingrese",
+            "EXAMPLE_1": "Para revisar información de jugador de NBA por favor ingrese",
+            "EXAMPLE_2_0": "O ingrese",
+            "EXAMPLE_2_1": "para tener más información útil"
+        }
+    },
+
+    "GAME": {
+        "CANT_FIND_TEAMS_THAT_MATCH": "No se pueden encontrar equipos coincidentes",
+        "DATE_INVALID": "La fecha es inválida",
+        "CANT_FIND_ANY_OPTION": "No se puede encontrar ninguna opción",
+        "LOADING_GAME_PREVIEW": "Cargando Previsualización del Juego",
+        "TOTAL": "Total",
+        "FINAL": "Final",
+        "LOADING_GAME_SCHEDULE": "Cargando Cronograma del Juego",
+        "WHICH_GAME_DO_YOU_WANT_TO_WATCH": "Qué juego desea mirar",
+        "GAME_RECORD_LEADERS": "Líderes de Record de Juego",
+        "HOME": "Local",
+        "AWAY": "Visitante",
+        "SCORE": "Puntuación",
+        "STATUS": "Estado",
+        "Points": "Puntos",
+        "Assists": "Asistencias",
+        "Rebounds": "Rebotes",
+        "BOXSCORE": {
+            "PLAYER": "JUGADOR",
+            "POS": "POS",
+            "MIN": "MIN",
+            "FG": "FG",
+            "3FG": "3FG",
+            "FT": "FT",
+            "OREB": "OREB",
+            "DREB": "DREB",
+            "REB": "REB",
+            "AST": "AST",
+            "STL": "STL",
+            "BLK": "BLK",
+            "TO": "TO",
+            "PF": "PF",
+            "PTS": "PTS"
+        }
+    },
+
+    "PLAYER": {
+        "REGULAR_SEASON": "Temporada Regular",
+        "DOESNT_HAVE_ANY_PLAYOFFS_DATA": "no tiene ninguna información de playoffs",
+        "HEIGHT": "Altura",
+        "WEIGHT": "Peso",
+        "COUNTRY": "País",
+        "BORN": "Nacimiento",
+        "EXP": "EXP",
+        "DRAFT": "Draft",
+        "PTS": "PTS",
+        "REB": "REB",
+        "AST": "AST",
+        "YRS": "años",
+        "SEASON": "TEMPORADA",
+        "TEAM": "EQUIPO",
+        "AGE": "EDAD",
+        "GP": "GP",
+        "MIN": "MIN",
+        "FG": "FG",
+        "3P": "3P",
+        "FT": "FT",
+        "STL": "STL",
+        "BLK": "BLK",
+        "TOV": "TOV",
+        "OVERALL": "General"
+    },
+
+    "LOCALE_SET_CORRECTLY": "El locale fue asignado correctamente",
+    "LIST_POSSIBLES_LOCALES": "Lista de posibles locales para asignar",
+
+    "Post Season": "Post Temporada",
+    "Regular Season": "Temporada Regular",
+    "SORRY": "Lo sentimos",
+    "TOTAL": "Total",
+    "TOTALS": "Totales",
+    "FINAL": "Final",
+    "TEAM": "Equipo"
+}

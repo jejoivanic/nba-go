@@ -24,6 +24,7 @@ import { error, bold } from '../../utils/log';
 import { cfontsDate } from '../../utils/cfonts';
 import getBlessed from '../../utils/blessed';
 import catchAPIError from '../../utils/catchAPIError';
+import * as locales from '../../utils/locales';
 
 const getGameWithOptionalFilter = async (games, option) => {
   if (option.filter && option.filter.split('=')[0] === 'team') {
@@ -41,7 +42,9 @@ const getGameWithOptionalFilter = async (games, option) => {
     );
 
     if (!potentialGames.length) {
-      error(`Can't find any teams that match ${team}`);
+      error(
+        `${locales.translate('GAME', 'CANT_FIND_TEAMS_THAT_MATCH')} ${team}`
+      );
     } else if (potentialGames.length === 1) {
       const homeTeam = await getTeamInfo(potentialGames[0].home);
       const visitorTeam = await getTeamInfo(potentialGames[0].visitor);
@@ -70,7 +73,7 @@ const game = async option => {
     ) {
       _date = format(option.date, 'YYYY-MM-DD');
     } else {
-      error('Date is invalid');
+      error(`${locales.translate('GAME', 'DATE_INVALID')}`);
       process.exit(1);
     }
   } else if (option.today) {
@@ -80,7 +83,11 @@ const game = async option => {
   } else if (option.yesterday) {
     _date = subDays(Date.now(), 1);
   } else {
-    error(`Can't find any option ${emoji.get('confused')}`);
+    error(
+      `${locales.translate('GAME', 'CANT_FIND_ANY_OPTION')} ${emoji.get(
+        'confused'
+      )}`
+    );
     process.exit(1);
   }
 
@@ -149,7 +156,9 @@ const game = async option => {
       screen.destroy();
       console.log('');
 
-      const spinner = ora('Loading Game Preview').start();
+      const spinner = ora(
+        locales.translate('GAME', 'LOADING_GAME_PREVIEW')
+      ).start();
 
       let homeTeamDashboardData;
       let visitorTeamDashboardData;

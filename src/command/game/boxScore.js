@@ -1,5 +1,6 @@
 import { basicTable } from '../../utils/table';
 import { bold, neonGreen, nbaRed } from '../../utils/log';
+import * as locales from '../../utils/locales';
 
 const alignCenter = columns =>
   columns.map(content => ({ content, hAlign: 'left', vAlign: 'center' }));
@@ -29,22 +30,22 @@ const createTeamBoxScore = team => {
       },
     ],
     alignCenter([
-      bold('PLAYER'),
-      bold('POS'),
-      bold('MIN'),
-      bold('FG'),
-      bold('3FG'),
-      bold('FT'),
+      bold(locales.translate('GAME', 'BOXSCORE', 'PLAYER')),
+      bold(locales.translate('GAME', 'BOXSCORE', 'POS')),
+      bold(locales.translate('GAME', 'BOXSCORE', 'MIN')),
+      bold(locales.translate('GAME', 'BOXSCORE', 'FG')),
+      bold(locales.translate('GAME', 'BOXSCORE', '3FG')),
+      bold(locales.translate('GAME', 'BOXSCORE', 'FT')),
       bold('+/-'),
-      bold('OREB'),
-      bold('DREB'),
-      bold('REB'),
-      bold('AST'),
-      bold('STL'),
-      bold('BLK'),
-      bold('TO'),
-      bold('PF'),
-      bold('PTS'),
+      bold(locales.translate('GAME', 'BOXSCORE', 'OREB')),
+      bold(locales.translate('GAME', 'BOXSCORE', 'DREB')),
+      bold(locales.translate('GAME', 'BOXSCORE', 'REB')),
+      bold(locales.translate('GAME', 'BOXSCORE', 'AST')),
+      bold(locales.translate('GAME', 'BOXSCORE', 'STL')),
+      bold(locales.translate('GAME', 'BOXSCORE', 'BLK')),
+      bold(locales.translate('GAME', 'BOXSCORE', 'TO')),
+      bold(locales.translate('GAME', 'BOXSCORE', 'PF')),
+      bold(locales.translate('GAME', 'BOXSCORE', 'PTS')),
     ])
   );
 
@@ -114,7 +115,7 @@ const createTeamBoxScore = team => {
 
   boxScoreTable.push(
     alignCenter([
-      'Totals',
+      locales.translate('TOTALS'),
       '',
       '',
       bold(`${field_goals_made}-${field_goals_attempted}`),

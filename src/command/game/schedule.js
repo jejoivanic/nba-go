@@ -11,6 +11,7 @@ import Team from '../Team';
 import NBA from '../../utils/nba';
 import { bold, neonGreen } from '../../utils/log';
 import catchAPIError from '../../utils/catchAPIError';
+import * as locales from '../../utils/locales';
 
 const MAX_WIDTH = 81;
 const TEAMNAME_WIDTH = 20;
@@ -94,28 +95,36 @@ const getTeamInfo = async (team, seasonId) => {
 
 const chooseGameFromSchedule = async (gamesData, option) => {
   const spinner = ora(
-    `Loading Game Schedule...(0/${gamesData.length})`
+    `${locales.translate('GAME', 'LOADING_GAME_SCHEDULE')}...(0/${
+      gamesData.length
+    })`
   ).start();
   let networksHeader = '';
 
   if (option.networks) {
-    networksHeader = `${padHomeTeamNetwork('Home')} ${emoji.get(
-      'tv'
-    )}  ${padAwayTeamNetwork('Away')}|`;
+    networksHeader = `${padHomeTeamNetwork(
+      locales.translate('GAME', 'HOME')
+    )} ${emoji.get('tv')}  ${padAwayTeamNetwork(
+      locales.translate('GAME', 'AWAY')
+    )}|`;
   }
 
-  const header = `│ ${padHomeTeamName('Home')}${center(
-    emoji.get('basketball'),
-    8
-  )}${padVisitorTeamName('Away')}│${center('Score', 11)}│${padGameStatus(
-    'Status'
+  const header = `│ ${padHomeTeamName(
+    locales.translate('GAME', 'HOME')
+  )}${center(emoji.get('basketball'), 8)}${padVisitorTeamName(
+    locales.translate('GAME', 'AWAY')
+  )}│${center(locales.translate('GAME', 'SCORE'), 11)}│${padGameStatus(
+    locales.translate('GAME', 'STATUS')
   )}│${networksHeader}`;
 
   const tableWidth = !option.networks ? MAX_WIDTH : MAX_WIDTH_WITH_NETWORKS;
   const questions = [
     {
       name: 'game',
-      message: 'Which game do you want to watch?',
+      message: `${locales.translate(
+        'GAME',
+        'WHICH_GAME_DO_YOU_WANT_TO_WATCH'
+      )}?`,
       type: 'list',
       pageSize: 30,
       choices: [
@@ -135,9 +144,10 @@ const chooseGameFromSchedule = async (gamesData, option) => {
       const homeTeam = await getTeamInfo(home, process.env.season);
       const visitorTeam = await getTeamInfo(visitor, process.env.season);
 
-      spinner.text = `Loading Game Schedule...(${index + 1}/${
-        gamesData.length
-      })`;
+      spinner.text = `${locales.translate(
+        'GAME',
+        'LOADING_GAME_SCHEDULE'
+      )}...(${index + 1}/${gamesData.length})`;
 
       questions[0].choices.push({
         name: createGameChoice(

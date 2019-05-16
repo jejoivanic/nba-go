@@ -4,6 +4,7 @@ import { getMainColor } from 'nba-color';
 
 import { bold } from '../../utils/log';
 import { basicTable } from '../../utils/table';
+import * as locales from '../../utils/locales';
 
 const alignCenter = columns =>
   columns.map(content => ({ content, hAlign: 'center', vAlign: 'center' }));
@@ -142,20 +143,20 @@ const seasonStatsCompare = (
   ]);
   seasonTable.push(
     alignCenter([
-      bold('SEASON'),
-      bold('TEAM'),
-      bold('AGE'),
-      bold('GP'),
-      bold('MIN'),
-      bold('PTS'),
-      bold('FG%'),
-      bold('3P%'),
-      bold('FT%'),
-      bold('AST'),
-      bold('REB'),
-      bold('STL'),
-      bold('BLK'),
-      bold('TOV'),
+      bold(locales.translate('PLAYER', 'SEASON')),
+      bold(locales.translate('PLAYER', 'TEAM')),
+      bold(locales.translate('PLAYER', 'AGE')),
+      bold(locales.translate('PLAYER', 'GP')),
+      bold(locales.translate('PLAYER', 'MIN')),
+      bold(locales.translate('PLAYER', 'PTS')),
+      bold(`${locales.translate('PLAYER', 'FG')}%`),
+      bold(`${locales.translate('PLAYER', '3P')}%`),
+      bold(`${locales.translate('PLAYER', 'FT')}%`),
+      bold(locales.translate('PLAYER', 'AST')),
+      bold(locales.translate('PLAYER', 'REB')),
+      bold(locales.translate('PLAYER', 'STL')),
+      bold(locales.translate('PLAYER', 'BLK')),
+      bold(locales.translate('PLAYER', 'TOV')),
     ])
   );
 
@@ -185,7 +186,7 @@ const seasonStatsCompare = (
   const overallRow = makeRow(overallArr);
   seasonTable.push(
     alignCenter([
-      bold('Overall'),
+      bold(locales.translate('PLAYER', 'OVERALL')),
       bold(''),
       bold(''),
       bold(overallRow.gp.trim()),

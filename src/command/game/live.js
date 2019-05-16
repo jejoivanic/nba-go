@@ -4,6 +4,7 @@ import R from 'ramda';
 import emoji from 'node-emoji';
 
 import { bold, nbaRed, neonGreen, colorTeamName } from '../../utils/log';
+import * as locales from '../../utils/locales';
 
 const checkOverStandard = (record, standard) =>
   +record >= standard ? nbaRed(record) : record;
@@ -35,7 +36,7 @@ const getScoreboardTableHeader = latestPeriod => {
     scoreboardTableHeader.push(`OT${overtimePeriod}`);
   }
 
-  scoreboardTableHeader.push('Total');
+  scoreboardTableHeader.push(locales.translate('GAME', 'TOTAL'));
   return scoreboardTableHeader;
 };
 
@@ -180,7 +181,7 @@ const live = (
   playByPlayBox.focus();
 
   if (isFinal) {
-    timeText.setContent(bold('Final'));
+    timeText.setContent(bold(locales.translate('GAME', 'FINAL')));
   } else {
     const overtimePeriod = getOvertimePeriod(latestPeriod);
     timeText.setContent(

@@ -1,14 +1,23 @@
 import path from 'path';
 
-const configurationFile = path.join(__dirname, './config/configuration.json');
+const relativePath = process.env.NODE_ENV === 'production' ? '.' : '..';
+const configurationFile = path.join(
+  __dirname,
+  relativePath,
+  'config/configuration.json'
+);
 const fs = require('fs');
 
 let configurationData;
 
+export const getJsonFileData = file => {
+  const rawConfigurationData = fs.readFileSync(file);
+  return JSON.parse(rawConfigurationData);
+};
+
 export const readPropertyValue = property => {
   if (!configurationData) {
-    const rawConfigurationData = fs.readFileSync(configurationFile);
-    configurationData = JSON.parse(rawConfigurationData);
+    configurationData = getJsonFileData(configurationFile);
   }
   return configurationData[property];
 };

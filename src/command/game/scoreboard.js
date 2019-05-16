@@ -6,6 +6,7 @@ import getBroadcastNetworks from './network';
 
 import { bold, nbaRed, neonGreen } from '../../utils/log';
 import { basicTable } from '../../utils/table';
+import * as locales from '../../utils/locales';
 
 const vAlignCenter = columns =>
   columns.map(column => {
@@ -41,7 +42,7 @@ const teamGameLeaders = (homeTeam, visitorTeam, field) =>
     nbaRed(homeTeam.getGameLeaders(field).StatValue),
     {
       colSpan: 2,
-      content: field,
+      content: locales.translate('GAME', field),
       hAlign: 'center',
     },
     nbaRed(visitorTeam.getGameLeaders(field).StatValue),
@@ -74,7 +75,7 @@ const scoreboard = (
     vAlignCenter([
       {
         colSpan: 10,
-        content: bold(`${display_year} ${display_season}`),
+        content: bold(`${display_year} ${locales.translate(display_season)}`),
         hAlign: 'center',
       },
     ]),
@@ -86,7 +87,7 @@ const scoreboard = (
       },
       {
         colSpan: 6,
-        content: bold('Final'),
+        content: bold(locales.translate('FINAL')),
         hAlign: 'center',
       },
       {
@@ -105,12 +106,12 @@ const scoreboard = (
         ),
         hAlign: 'left',
       },
-      bold('Team'),
+      bold(locales.translate('TEAM')),
       bold('Q1'),
       bold('Q2'),
       bold('Q3'),
       bold('Q4'), // FIXME OT
-      bold(center('Total', 9)),
+      bold(center(locales.translate('TOTAL'), 9)),
       'PG',
       {
         content: bold(
@@ -241,7 +242,7 @@ const scoreboard = (
     vAlignCenter([
       {
         colSpan: 10,
-        content: bold('Game Record Leaders'),
+        content: bold(locales.translate('GAME', 'GAME_RECORD_LEADERS')),
         hAlign: 'center',
       },
     ]),

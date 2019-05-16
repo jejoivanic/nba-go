@@ -8,6 +8,7 @@ import playerInfoCompare from './infoCompare';
 import NBA from '../../utils/nba';
 import catchAPIError from '../../utils/catchAPIError';
 import seasonStatsCompare from './seasonStatsCompare';
+import * as locales from '../../utils/locales';
 
 const player = async (playerName, option) => {
   await NBA.updatePlayers();
@@ -105,7 +106,7 @@ const player = async (playerName, option) => {
             commonPlayerInfo[0].teamAbbreviation;
 
           seasonStats({
-            seasonType: 'Regular Season',
+            seasonType: locales.translate('PLAYER', 'REGULAR_SEASON'),
             ...commonPlayerInfo[0],
             seasonTotals: seasonTotalsRegularSeason,
             careerTotals: careerTotalsRegularSeason[0],
@@ -132,9 +133,11 @@ const player = async (playerName, option) => {
 
           if (careerTotalsPostSeason.length === 0) {
             console.log(
-              `Sorry, ${_player.firstName} ${
+              `${locales.translate('SORRY')}, ${_player.firstName} ${
                 _player.lastName
-              } doesn't have any playoffs data ${emoji.get('confused')}`
+              } ${locales.translate(
+                'DOESNT_HAVE_ANY_PLAYOFFS_DATA'
+              )} ${emoji.get('confused')}`
             );
           } else {
             commonPlayerInfo[0].nowTeamAbbreviation =

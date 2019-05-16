@@ -217,6 +217,30 @@ $ nba-go player Curry -i -r -p
 
 ![player mixed gif](https://user-images.githubusercontent.com/12113222/32416928-5054d48a-c28c-11e7-84d3-bc17681e1a5e.gif)
 
+### Locale
+
+Change the locale for displaying the information in different languages.
+
+#### Options
+
+##### `-l` or `--list`
+
+List the available locales to set.
+
+```
+$ nba-go locale -l
+```
+
+##### `-s <locale>` or `--set <locale>`
+
+Set the chosen locale as the current one.
+
+**Note.** The chosen **locale** must match one in the list given with `nba-go locale -l`.
+
+```
+$ nba-go locale -s en_US
+```
+
 ## Development
 
 It's simple to run `nba-go` on your local computer.  
